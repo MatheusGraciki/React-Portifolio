@@ -302,4 +302,8 @@ font-size: 1.5rem;
     .cta-buttons {
         justify-content: center;
     }
+
+    .social-links {
+        justify-content: center;
+    }
 }

@@ -29,9 +29,11 @@ export const Hero = () => {
                     <motion.div className='hero-badge'>
                         <span> 👋 Hello, I'm</span>
                     </motion.div>
+
                     <motion.h1 className='glitch' variants={fadeInUp} whileHover={{scale: 1.02}}>
                         Matheus Graciki
                     </motion.h1>
+
                     <motion.h2 
                         className='hero-subtitle' 
                         variants={fadeInUp}
@@ -39,6 +41,7 @@ export const Hero = () => {
                         {" "}
                         Full-Stack Developer
                     </motion.h2>
+
                     <motion.p 
                         className='hero-description' 
                         variants={fadeInUp}
@@ -60,13 +63,24 @@ export const Hero = () => {
                             {" "}
                             View My Work
                         </motion.a>
+
                         <motion.a 
-                            href="#projects" 
+                            href="#contacts" 
                             className='cta-secondary' 
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}    
                         >
                             Contact Me
+                        </motion.a>
+                    </motion.div>
+
+                    <motion.div className='social-links' variants={staggerContainer}>
+                        <motion.a href='https://github.com/MatheusGraciki' target='_blank'> 
+                            <i className="fab fa-github" />
+                        </motion.a>
+
+                        <motion.a  href='https://www.linkedin.com/in/matheus-graciki/' target='_blank'> 
+                            <i className="fab fa-linkedin" />
                         </motion.a>
                     </motion.div>
                 </motion.div>    

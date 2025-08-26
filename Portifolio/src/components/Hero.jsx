@@ -114,7 +114,7 @@ export const Hero = () => {
   stack: {
     languages: ["JavaScript", "TypeScript", "Python"],
     frameworks: ["React", "Node/ExpressJs", "TailwindCSS",],
-    databases: ["PostgreSQL", "MongoDB", "SQl"],
+    databases: ["PostgreSQL", "MongoDB", "MySQl"],
   },
   traits: [
     "coffee enthusiast",

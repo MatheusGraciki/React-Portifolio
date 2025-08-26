@@ -13,8 +13,8 @@ function App() {
   }, []);
 
   return (
-    <div className={`app ${isLoaded ? 'loaded' : ''}`}>
-      <Navbar />
+<div className={`app ${isLoaded ? 'loaded' : ''}`}>
+    <Navbar />
 
       <Hero />
       <Projects />

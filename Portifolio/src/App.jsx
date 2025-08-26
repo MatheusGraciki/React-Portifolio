@@ -7,7 +7,7 @@ import { Contact } from './components/Contact Section'
 function App() {
 
   return (
-    <>
+    <div className='App'>
       <Navbar />
 
       <Hero />
@@ -17,7 +17,7 @@ function App() {
       <>
       <p> &copy; 2025 Developed by Matheus Graciki. All rights reserved</p>
       </>
-    </>
+    </div>
   )
 }
 

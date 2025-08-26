@@ -3,11 +3,17 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Section'
 import { Contact } from './components/Contact Section'
+import { useEffect, useState } from 'react'
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-    <div className='App'>
+    <div className={`app ${isLoaded ? 'loaded' : ''}`}>
       <Navbar />
 
       <Hero />

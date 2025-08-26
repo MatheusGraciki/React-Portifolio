@@ -101,9 +101,9 @@ body {
 .hero {
     min-height: 100vh;
     background: linear-gradient(
-      135deg,
-      var(--gradient-start) 0%,
-      var(--gradient-end) 100%
+        135deg,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
     );
 
     display: flex;
@@ -219,10 +219,10 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
     );
     transition: 0.5s;
 }
@@ -305,5 +305,11 @@ font-size: 1.5rem;
 
     .social-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image-container {
+        display: none;
     }
 }

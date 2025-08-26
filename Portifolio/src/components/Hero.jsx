@@ -1,4 +1,6 @@
 import { motion, stagger } from 'framer-motion';
+import { Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const fadeInUp ={
     initial: { opacity: 0, y: 20 },
@@ -83,6 +85,50 @@ export const Hero = () => {
                             <i className="fab fa-linkedin" />
                         </motion.a>
                     </motion.div>
+                </motion.div>
+
+                <motion.div 
+                className='hero-code-container'
+                initial={{ opacity: 0, x: 50 }} 
+                animate={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                    <div className="code-display">
+                        <SyntaxHighlighter
+                        language="typescript"
+                        customStyle={{
+                            margin: 0,
+                            padding: "2rem",
+                            height: "100%",
+                            borderRadius: "20px",
+                            background: "rgba(30, 41, 59, 0.8)",
+                            backdropFilter: "blur(10px)",
+                            marginBottom: 50,
+                        }}
+                        style={vscDarkPlus}
+                        >
+                            {`const aboutMe: DeveloperProfile = {
+  codename: "Matheus Graciki",
+  origin: "🌍 Joinville, Brazil",
+  role: "Fullstack Wizard",
+  stack: {
+    languages: ["JavaScript", "TypeScript", "Python"],
+    frameworks: ["React", "Node/ExpressJs", "TailwindCSS",],
+    databases: ["PostgreSQL", "MongoDB", "SQl"],
+  },
+  traits: [
+    "coffee enthusiast",
+    "API whisperer",
+    "dark mode advocate",
+    "terminal aesthetic enthusiast",
+    ],
+  missionStatement:
+        "Turning ideas into interfaces and bugs into feature",
+  availability: "Available for hire",
+};`}
+                        </SyntaxHighlighter>
+                    </div>
+                    
                 </motion.div>    
             </div>
         </motion.section>

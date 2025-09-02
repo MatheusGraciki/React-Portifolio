@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variáveis */
 :root {
     --primary-color: #7c3aed;
     --primary-dark: #5b21b6;
@@ -20,12 +22,14 @@
     --card-border: rgba(148, 163, 184, 0.1);
 }
 
+/* Body */
 body {
     line-height: 1.6;
     color: var(--text-color);
     background: var(--background);
 }
 
+/* App Animation */
 .app {
     opacity: 0;
     transform: translateY(20px);
@@ -39,6 +43,7 @@ body {
     transform: translateY(0);
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -72,7 +77,7 @@ body {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
 }
@@ -97,15 +102,9 @@ body {
 }
 
 /* Hero Section */
-
 .hero {
     min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -218,12 +217,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: 0.5s;
 }
 
@@ -247,7 +241,7 @@ body {
 }
 
 .floating-card {
-position: absolute;
+    position: absolute;
     bottom: 2rem;
     right: -2rem;
     background: rgba(255, 255, 255, 0.1);
@@ -256,7 +250,7 @@ position: absolute;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+}
 
 .card-content {
     display: flex;
@@ -271,21 +265,29 @@ position: absolute;
 }
 
 .card-icon {
-font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
+/* Hero Image e SyntaxHighlighter */
 .hero-image-container {
     flex: 1;
     position: relative;
     max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .code-display {
-    width: 100%;    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin-bottom: 50px;
 }
 
 /* Hero Media Queries */
-
 @media (max-width: 1024px) {
     .hero-container {
         flex-direction: column;
@@ -306,16 +308,25 @@ font-size: 1.5rem;
     .social-links {
         justify-content: center;
     }
+
+    .code-display {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-image-container {
-        display: none;
+        display: block;
+        max-width: 100%;
+    }
+
+    .hero-image-container .code-display {
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
 
 /* Projects Sections */
-
 .projects {
     padding: 6rem 5%;
     background-color: var(--background);
@@ -341,7 +352,7 @@ font-size: 1.5rem;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     border: 1px solid var(--card-border);
     position: relative;
     display: flex;
@@ -355,12 +366,7 @@ font-size: 1.5rem;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-        );
-
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -391,12 +397,7 @@ font-size: 1.5rem;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
@@ -424,12 +425,11 @@ font-size: 1.5rem;
     flex-wrap: wrap;
 }
 
-    .project-tech span {
-        padding: 0.3rem 0.8rem;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50px;
-        font-size: 0.8rem;
-        color: var(--accent-color);
-        border: 1px solid rgba(244, 114, 182, 0.2);
+.project-tech span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    border: 1px solid rgba(244, 114, 182, 0.2);
 }
-

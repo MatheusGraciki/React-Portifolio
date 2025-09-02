@@ -88,7 +88,7 @@ export const Hero = () => {
                 </motion.div>
 
                 <motion.div 
-                className='hero-code-container'
+                className='hero-image-container'
                 initial={{ opacity: 0, x: 50 }} 
                 animate={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -97,34 +97,36 @@ export const Hero = () => {
                         <SyntaxHighlighter
                         language="typescript"
                         customStyle={{
-                            margin: 0,
-                            padding: "2rem",
-                            height: "100%",
+                            margin: "0",
+                            padding: window.innerWidth < 768 ? "1rem" : "2rem",
+                            width: "100%",
+                            maxWidth: "100%",
                             borderRadius: "20px",
                             background: "rgba(30, 41, 59, 0.8)",
                             backdropFilter: "blur(10px)",
+                            overflowX: "auto",
                             marginBottom: 50,
                         }}
                         style={vscDarkPlus}
                         >
-                            {`const aboutMe: DeveloperProfile = {
+                {`const aboutMe: DeveloperProfile = {
   codename: "Matheus Graciki",
   origin: "🌍 Joinville, Brazil",
   role: "Fullstack Wizard",
   stack: {
-    languages: ["JavaScript", "TypeScript", "Python"],
-    frameworks: ["React", "Node/ExpressJs", "TailwindCSS",],
-    databases: ["PostgreSQL", "MongoDB", "MySQl"],
-  },
+    languages: ["JavaScript", "TypeScript"],
+    frameworks: ["React", "Node/ExpressJs"],
+  databases: ["PostgreSQL", "MongoDB", "MySQl"],
+},
   traits: [
     "coffee enthusiast",
     "API whisperer",
     "dark mode advocate",
     "terminal aesthetic enthusiast",
-    ],
+],
   missionStatement:
-        "Turning ideas into interfaces and bugs into feature",
-  availability: "Available for hire",
+    "Turning ideas into interfaces and bugs into feature",
+    availability: "Available for hire",
 };`}
                         </SyntaxHighlighter>
                     </div>
